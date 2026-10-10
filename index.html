@@ -53,14 +53,18 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
 
   <div class="shell">
     <!-- Left column: identity card, stays in view on wide screens -->
     <header class="identity">
-      <div class="avatar" aria-hidden="true">
-        <span class="monogram">LB</span>
-        <!-- Drop your photo at assets/img/profile.jpg (square, ≥ 400×400). Falls back to the monogram if missing. -->
-        <img src="assets/img/profile.jpg" alt="" width="132" height="132" onerror="this.remove()">
+      <div class="portrait" aria-hidden="true">
+        <svg class="ring" viewBox="0 0 148 148"><circle cx="74" cy="74" r="73" pathLength="1"/></svg>
+        <div class="avatar">
+          <span class="monogram">LB</span>
+          <!-- Drop your photo at assets/img/profile.jpg (square, ≥ 400×400). Falls back to the monogram if missing. -->
+          <img src="assets/img/profile.jpg" alt="" width="132" height="132" onerror="this.remove()">
+        </div>
       </div>
 
       <h1 class="name">Luigi Bagnato</h1>
@@ -95,7 +99,7 @@
       <section id="experience" aria-labelledby="exp-h">
         <h2 id="exp-h" class="eyebrow">Experience</h2>
         <ol class="timeline">
-          <li class="job">
+          <li class="job reveal">
             <p class="when"><span class="ph">[Start]</span> – Present</p>
             <div class="what">
               <h3>Lead AI Scientist</h3>
@@ -103,7 +107,7 @@
               <p>Leads research in affective computing, on-device inference and conversational AI. Work presented at ACM UMAP 2026.</p>
             </div>
           </li>
-          <li class="job">
+          <li class="job reveal">
             <p class="when">May 2021 – <span class="ph">[End]</span></p>
             <div class="what">
               <h3>Lead Data Scientist</h3>
@@ -111,7 +115,7 @@
               <p>Designed and implemented computer-vision and machine-learning pipelines.</p>
             </div>
           </li>
-          <li class="job">
+          <li class="job reveal">
             <p class="when"><span class="ph">[Dates]</span></p>
             <div class="what">
               <h3>Senior Computer Vision Engineer</h3>
@@ -119,7 +123,7 @@
               <p class="ph">[Placeholder: scope and key outcome.]</p>
             </div>
           </li>
-          <li class="job">
+          <li class="job reveal">
             <p class="when"><span class="ph">[Dates]</span></p>
             <div class="what">
               <h3>Digital Image Processing Engineer</h3>
@@ -127,7 +131,7 @@
               <p class="ph">[Placeholder: scope and key outcome.]</p>
             </div>
           </li>
-          <li class="job">
+          <li class="job reveal">
             <p class="when"><span class="ph">[Dates]</span></p>
             <div class="what">
               <h3>Researcher <span class="ph">[exact title]</span></h3>
@@ -142,15 +146,15 @@
       <section id="expertise" aria-labelledby="skills-h">
         <h2 id="skills-h" class="eyebrow">Expertise</h2>
         <dl class="skills">
-          <div>
+          <div class="reveal">
             <dt>Leadership</dt>
             <dd>AI strategy · R&amp;D roadmaps · Building and leading teams · Research-to-product transfer</dd>
           </div>
-          <div>
+          <div class="reveal">
             <dt>AI domains</dt>
             <dd>Affective computing · Conversational AI · Small language models · Computer vision</dd>
           </div>
-          <div>
+          <div class="reveal">
             <dt>Engineering</dt>
             <dd>On-device &amp; edge inference · ML pipelines · Image processing · Computational photography</dd>
           </div>
@@ -160,27 +164,27 @@
       <section id="publications" aria-labelledby="pubs-h">
         <h2 id="pubs-h" class="eyebrow">Selected publications &amp; patents</h2>
         <ul class="pubs">
-          <li>
+          <li class="reveal">
             <p class="venue">ACM UMAP 2026 · Gothenburg</p>
             <h3>Evaluating Persona Consistency and Emotion Understanding in Small Language Models</h3>
             <p>Shows that giving a small language model an explicit emotion label roughly doubles its end-to-end emotion understanding.</p>
           </li>
-          <li>
+          <li class="reveal">
             <p class="venue">Patent · <span class="ph">[number, year]</span></p>
             <h3><span class="ph">[Title of omnidirectional camera patent]</span></h3>
           </li>
-          <li>
+          <li class="reveal">
             <p class="venue"><span class="ph">[Venue, year]</span></p>
             <h3><span class="ph">[Title of related sensor paper]</span></h3>
           </li>
         </ul>
-        <p class="more"><a href="https://scholar.google.com/citations?user=d8YiAYIAAAAJ" rel="noopener">Full list on Google Scholar →</a></p>
+        <p class="more"><a href="https://scholar.google.com/citations?user=d8YiAYIAAAAJ" rel="noopener">Full list on Google Scholar <span class="arrow" aria-hidden="true">→</span></a></p>
       </section>
 
       <section id="contact" aria-labelledby="contact-h">
         <h2 id="contact-h" class="eyebrow">Contact</h2>
         <p class="lede">Open to conversations about AI leadership roles, advisory work and speaking.</p>
-        <dl class="contact">
+        <dl class="contact reveal">
           <div><dt>Email</dt><dd><span class="ph">[your.email@example.com]</span></dd></div>
           <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/luigibagnato/" rel="noopener">linkedin.com/in/luigibagnato</a></dd></div>
           <div><dt>Location</dt><dd><span class="ph">[City, Country]</span></dd></div>
@@ -192,5 +196,6 @@
       </footer>
     </main>
   </div>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
